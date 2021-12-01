@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.nav{
+			/*background-color: black;*/
+			display: flex;
+			align-items: center;
+			position: sticky;
+			top: 0px;
+		}
+		.nav::before{
+		content: "";
+		background-color: black;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		opacity: 0.5;
+		}
+
+		.nav ul{
+			margin-top: 10px;
+		}
+
+		.nav li{
+			list-style: none;
+			margin: 6px 6px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul class="nav">
+			<li>Home</li>
+			<li>About us</li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+
+	<script>
+		var sen = "This is a test game!";
+		console.log(sen)
+
+		// indexOf function returns the first occurence of substring
+		var test = sen.indexOf("game");
+		console.log(test)
+
+		// lastIndexOf function returns the last occurence of substring
+		var game = sen.lastIndexOf("game");
+		console.log(game)
+
+		// Functions to get substrings
+		var subStr = sen.substring(2, 9);
+		console.log(subStr)
+
+		// concat function is used to concatinate two strings
+		var con = sen.concat("match");
+		console.log(con)
+
+		// replace function is used to replace a string with other
+		var replaced = sen.replace("game", "match");
+		console.log(replaced)
+
+		// changing string into uppercase and lowercase letters
+		console.log(sen.toUpperCase());
+		console.log(sen.toLowerCase());
+
+		// Function for removing whitespaces
+		var whitespc = "   This   is     a test     game";
+		console.log(whitespc)
+		console.log(whitespc.trim())
+		
+		// Function for extracting a character from string
+		var char = sen.charAt(3);
+		console.log(char)
+	</script>
+</body>
+</html>
